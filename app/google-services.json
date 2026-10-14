@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "183481949982",
+    "project_id": "smartx-mobile-st10448883",
+    "storage_bucket": "smartx-mobile-st10448883.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:183481949982:android:93acda91e31ced29a1f30f",
+        "android_client_info": {
+          "package_name": "za.ac.iie.smartx"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC53xe1t47W1cYDJCpSJGqvH8Gw2z4P3rQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
