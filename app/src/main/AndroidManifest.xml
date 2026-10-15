@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Required for Google Sign-In -->
+    <!-- Required for Google Sign-In and REST API calls -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -16,7 +16,7 @@
         android:theme="@style/Theme.SmartXMobile"
         tools:targetApi="31">
 
-        <!-- LoginActivity is now the LAUNCHER activity -->
+        <!-- LoginActivity is the LAUNCHER activity -->
         <activity
             android:name=".LoginActivity"
             android:exported="true"
@@ -27,11 +27,23 @@
             </intent-filter>
         </activity>
 
-        <!-- MainActivity is now a normal activity (no launcher intent) -->
+        <!-- MainActivity: post-login dashboard -->
         <activity
             android:name=".MainActivity"
             android:exported="false"
             android:label="Smart-X Dashboard" />
+
+        <!-- SettingsActivity: user preferences -->
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false"
+            android:label="Settings" />
+
+        <!-- SensorsActivity: REST API data display -->
+        <activity
+            android:name=".SensorsActivity"
+            android:exported="false"
+            android:label="Sensors" />
 
         <!-- Firebase Cloud Messaging metadata (optional, for later) -->
         <meta-data

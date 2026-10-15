@@ -30,10 +30,12 @@ class MainActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
+        // Display user's email
         val userEmail = auth.currentUser?.email ?: "Not signed in"
         findViewById<TextView>(R.id.userEmailText).text = userEmail
         Log.d(TAG, "Displaying user: $userEmail")
 
+        // Logout button
         findViewById<Button>(R.id.logoutButton).setOnClickListener {
             Log.d(TAG, "Logout tapped")
             auth.signOut()
@@ -42,14 +44,16 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
 
+        // Settings button — opens SettingsActivity
         findViewById<Button>(R.id.settingsButton).setOnClickListener {
             Log.d(TAG, "Settings tapped")
-            Toast.makeText(this, "Settings coming soon", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, SettingsActivity::class.java))
         }
 
+        // View Sensors button — opens SensorsActivity
         findViewById<Button>(R.id.viewSensorsButton).setOnClickListener {
             Log.d(TAG, "View Sensors tapped")
-            Toast.makeText(this, "Sensors coming soon", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, SensorsActivity::class.java))
         }
     }
 
